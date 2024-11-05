@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Circle, CircleDot } from 'lucide-react';
-import deskImage from './OIP.jpg'
+import deskImage from './desk.jpg'
+import roomImage from './room.jpg'
+import classroom from './classroom.jpg'
+import gymImage from './gym.jpg'
 
 const ImageGallery = () => {
     const spaces = [
@@ -11,28 +14,18 @@ const ImageGallery = () => {
         },
         {
             title: "My Room",
-            image: "/api/placeholder/1200/800",
+            image: roomImage,
             description: `What my room represents to me has changed since I’ve come to college. Back home, it was just my space – where I'd relax, watch YouTube, listen to music, or kick around the football. But coming to college changed that. It’s now a space I share with others. It's where my roommate and I have late-night talks. Where friends from across the hall drop by just to hang out. Where we order late-night food and play FIFA or Minecraft. It's not just my space anymore – it's become this place where I’ve made some amazing new friends, all through small, everyday moments we share.`
         },
         {
             title: "The Gym and Soccer Field",
-            image: "/api/placeholder/1200/800",
+            image: gymImage,
             description: `The gym and soccer field are different. These are places I go to not because I have to but because I want to. They’re things I do just for myself deliberately. They give me a sense of control over my life even when things aren’t going my way. I come here to get motivated when I need a boost and to calm down when I'm feeling overwhelmed. These places help me find the right balance and peace of mind.`
         },
         {
             title: "The Classroom",
-            image: "/api/placeholder/1200/800",
-            description: `This intimate corner of my living room has become my favorite retreat for literary 
-      escape. A oversized, well-worn leather armchair, passed down from my grandfather, serves as the 
-      perfect reading throne. The chair is accompanied by an adjustable floor lamp that provides perfect 
-      lighting for any time of day, its warm LED bulb reducing eye strain during longer reading sessions. 
-      A small side table, just the right height for a coffee mug and book, features a lower shelf that 
-      houses current reads and literary magazines. The floating shelves above display my curated book 
-      collection, arranged not just by genre but by color, creating an aesthetically pleasing rainbow 
-      effect that makes finding books an enjoyable experience. A soft, hand-knotted rug beneath adds 
-      warmth and comfort, while a lightweight throw blanket draped over the chair's arm stands ready 
-      for cozy reading sessions. The wall features a vintage reading-themed print that I discovered at 
-      a local flea market, perfectly capturing the spirit of this personal library nook.`
+            image: classroom,
+            description: `The way I view the classroom has also really changed after coming to college. In school, classrooms were where I saw the same people every day for years – 8 years to be exact and where I made my closest friends. It was almost as if I had a whole separate life inside of a classroom with those same people every day. But coming to college this changed. People come and go, faces change with each class, and there's less time to just talk and get to know each other. It’s different but I’ve learned to get used to this and make an effort to connect with people in other places.`
         }
     ];
 
@@ -54,8 +47,8 @@ const ImageGallery = () => {
         <div className="h-screen w-full flex flex-col bg-gray-50">
             {/* Header */}
             <div className="text-center py-6" style={{ marginBottom: "30px" }}>
-                <h1 className="text-3xl font-bold text-gray-800">My Personal Spaces</h1>
-                <p className="text-gray-600 mt-2">A tour through the places that shape my daily life</p>
+                <h1 className="text-3xl font-bold text-gray-800">My Spaces</h1>
+                <p className="text-gray-600 mt-2">A reflection on the meaning of the spaces in my daily life </p>
             </div>
 
             {/* Main content */}
@@ -88,8 +81,8 @@ const ImageGallery = () => {
 
                 {/* Content section */}
                 <div className="lg:w-1/2 p-8 overflow-y-auto">
-                    <h2 className="text-2xl font-bold mb-4">{spaces[currentIndex].title}</h2>
-                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    <h2 style={{marginBottom:"10px", fontSize:40, textDecoration:"underline"}} className="text-2xl font-bold mb-4">{spaces[currentIndex].title}</h2>
+                    <p className="text-gray-900 leading-relaxed whitespace-pre-line">
                         {spaces[currentIndex].description}
                     </p>
 
